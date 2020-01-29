@@ -6,63 +6,195 @@ public class ManagersCrossing{
                                      int managerAAfter, int managerBAfter, int managerCAfter, int engineerAAfter,
                                      int engineerBAfter, int engineerCAfter){
 
-        //Checking for same side as boat
-        
-
-        //Checking for engineer A poaching (postion 1)
+       //Initializing all parameter values
+    	if (boatBefore == 1 && boatBefore == 2) {
+    		System.out.println("All positions must be 1 or 2!");
+    		return false;
+    	}
+    	
+    	if (boatAfter == 1 && boatBefore == 2) {
+    		System.out.println("All positions must be 1 or 2!");
+    		return false;
+    	}
+    	
+    	if (managerABefore == 1 && managerABefore == 2) {
+    		System.out.println("All positions must be 1 or 2!");
+    		return false;
+    	}
+    	
+    	if (managerBBefore == 1 && managerBBefore == 2) {
+    		System.out.println("All positions must be 1 or 2!");
+    		return false;
+    	}
+    	
+    	if (managerCBefore == 1 && managerCBefore == 2) {
+    		System.out.println("All positions must be 1 or 2!");
+    		return false;
+    	}
+    	
+    	if (engineerABefore == 1 && engineerABefore == 2) {
+    		System.out.println("All positions must be 1 or 2!");
+    		return false;
+    	}
+    	
+    	if (engineerBBefore == 1 && engineerBBefore == 2) {
+    		System.out.println("All positions must be 1 or 2!");
+    		return false;
+    	}
+    	
+    	if (engineerCBefore == 1 && engineerCBefore == 2) {
+    		System.out.println("All positions must be 1 or 2!");
+    		return false;
+    	}
+    	
+    	if (managerAAfter == 1 && managerAAfter == 2) {
+    		System.out.println("All positions must be 1 or 2!");
+    		return false;
+    	}
+    	
+    	if (managerBAfter == 1 && managerBAfter == 2) {
+    		System.out.println("All positions must be 1 or 2!");
+    		return false;
+    	}
+    	
+    	if (managerCAfter == 1 && managerCAfter == 2) {
+    		System.out.println("All positions must be 1 or 2!");
+    		return false;
+    	}
+    	
+    	if (engineerAAfter == 1 && engineerAAfter == 2) {
+    		System.out.println("All positions must be 1 or 2!");
+    		return false;
+    	}
+    	
+    	if (engineerBAfter == 1 && engineerBAfter == 2) {
+    		System.out.println("All positions must be 1 or 2!");
+    		return false;
+    	}
+    	
+    	if (engineerCAfter == 1 && engineerCAfter == 2) {
+    		System.out.println("All positions must be 1 or 2!");
+    		return false;
+    	}
+    	
+    	//Checking for same side as boat
+    	if (boatBefore == boatAfter) {
+    		System.out.println("The boat must move!");
+    		return false;
+    	}
+    	
+    	//Checking that people moving is on the same side as boat
+    	if (managerAAfter != boatAfter && managerAAfter != managerABefore) {
+    		System.out.println("You may not move a person who is not with the boat!");
+    		return false;
+    	}
+    	
+    	if (managerBAfter != boatAfter && managerBAfter != managerBBefore) {
+    		System.out.println("You may not move a person who is not with the boat!");
+    		return false;
+    	}
+    	
+    	if (managerCAfter != boatAfter && managerCAfter != managerCBefore) {
+    		System.out.println("You may not move a person who is not with the boat!");
+    		return false;
+    	}
+    	
+    	if (engineerAAfter != boatAfter && engineerAAfter != engineerABefore) {
+    		System.out.println("You may not move a person who is not with the boat!");
+    		return false;
+    	}
+    	
+    	if (engineerBAfter != boatAfter && engineerBAfter != engineerBBefore) {
+    		System.out.println("You may not move a person who is not with the boat!");
+    		return false;
+    	}
+    	
+    	if (engineerCAfter != boatAfter && engineerCAfter != engineerCBefore) {
+    		System.out.println("You may not move a person who is not with the boat!");
+    		return false;
+    	}
+    	
+    	//Checking to make sure 1 or 2 people are moving
+    	int peopleMoving = 0;
+    	
+    	if (managerABefore != managerAAfter) {
+    		peopleMoving = peopleMoving+1;
+    	}
+    	
+    	if (managerBBefore != managerBAfter) {
+    		peopleMoving = peopleMoving+1;
+    	}
+    	
+    	if (managerCBefore != managerCAfter) {
+    		peopleMoving = peopleMoving+1;
+    	}
+    	
+    	if (engineerABefore != engineerAAfter) {
+    		peopleMoving = peopleMoving+1;
+    	}
+    	
+    	if (engineerBBefore != engineerBAfter) {
+    		peopleMoving = peopleMoving+1;
+    	}
+    	
+    	if (engineerCBefore != engineerCAfter) {
+    		peopleMoving = peopleMoving+1;
+    	}
+    	
+    	if (peopleMoving < 1 || peopleMoving > 2) {
+    		System.out.println("You must move 1 or 2 people!");
+    	}
+    	
+        //Checking for engineer A poaching (position 1)
         if (((engineerABefore==1 || (engineerAAfter == 1)) && ((managerABefore==2 || managerAAfter==2)))  &&
-                (((managerBBefore==1 || managerBAfter==1)) || ((managerCBefore==1 || managerCAfter==1))){
+                (((managerBBefore==1 || managerBAfter==1)))){
+            System.out.println("Manager B would try to recruit someone!");
             return false;
-            System.out.println("Engineer A would be poached!");
         }
 
-        //Checking for engineer A poaching (postion 2)
+        //Checking for engineer A poaching (position 2)
         if (((engineerABefore==2 || (engineerAAfter==2)) && ((managerABefore==1 || managerAAfter==1)))  &&
-                (((managerBBefore==2 || managerBAfter==2)) || ((managerCBefore==2 || managerCAfter==2))){
-            return false;
+                (((managerBBefore==2 || managerBAfter==2)) || ((managerCBefore==2 || managerCAfter==2)))){
             System.out.println("Engineer A would be poached!");
+            return false;
         }
 
         //Checking for engineer B poaching (position 1)
         if (((engineerBBefore==1 || (engineerBAfter == 1)) && ((managerBBefore==2 || managerBAfter==2)))  &&
-                (((managerABefore==1 || managerAAfter==1)) || ((managerCBefore==1 || managerCAfter==1))) {
-            return false;
+                (((managerABefore==1 || managerAAfter==1)) || ((managerCBefore==1 || managerCAfter==1)))) {
             System.out.println("Engineer B would be poached!");
+            return false;
         }
 
         //Checking for engineer B poaching (position 2)
         if (((engineerBBefore==2 || (engineerBAfter == 2)) && ((managerBBefore==1 || managerBAfter==1)))  &&
-                (((managerABefore==2 || managerAAfter==2)) || ((managerCBefore==2 || managerCAfter==2))) {
-            return false;
+                (((managerABefore==2 || managerAAfter==2)) || ((managerCBefore==2 || managerCAfter==2)))) {
             System.out.println("Engineer B would be poached!");
+            return false;
         }
 
         //Checking for engineer C poaching (position 1)
         if (((engineerCBefore==1 || (engineerCAfter == 1)) && ((managerCBefore==2 || managerCAfter==2)))  &&
-                (((managerABefore==1 || managerAAfter==1)) || ((managerBBefore==1 || managerBAfter==1))) {
-            return false;
+                (((managerABefore==1 || managerAAfter==1)) || ((managerBBefore==1 || managerBAfter==1)))) {
             System.out.println("Engineer C would be poached!");
+            return false;
         }
 
         //Checking for engineer C poaching (position 2)
         if (((engineerCBefore==2 || (engineerCAfter == 2)) && ((managerCBefore==1 || managerCAfter==1)))  &&
-                (((managerABefore==2 || managerAAfter==2)) || ((managerBBefore==2 || managerBAfter==2))) {
-            return false;
+                (((managerABefore==2 || managerAAfter==2)) || ((managerBBefore==2 || managerBAfter==2)))) {
             System.out.println("Engineer C would be poached!");
+            return false;
         }
+        
 
-        //Checking for boat movement
-        if (boatAfter==boatBefore) {
-                return false;
-                System.out.println("You need to move the boat!")
-            }
 
         //Checking win condition
         if (boatAfter==2 && managerAAfter==2 && managerBAfter==2 && managerCAfter==2 && engineerAAfter==2 && engineerBAfter==2 &&
                 engineerCAfter==2) {
         System.out.println("You win!");
         }
-
+        return true;
     }
 
 
