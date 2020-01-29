@@ -1,0 +1,33 @@
+
+public class ManagersCrossing{
+  
+
+  public static boolean isMoveOkay(int boatBefore, int managerABefore, int managerBBefore, int managerCBefore, 
+                                   int engineerABefore, int engineerBBefore, int engineerCBefore, int boatAfter, 
+                                   int managerAAfter, int managerBAfter, int managerCAfter, int engineerAAfter, 
+                                   int engineerBAfter, int engineerCAfter){
+
+    if (b)
+
+    boolean legalMove =
+//Fill in your code here. Note that you can create other methods to do each test, but use this 
+//method to coordinate those tests.
+    if (boatAfter==2 && managerAAfter==2 && managerBAfter==2 && managerCAfter==2 && engineerAAfter==2 && engineerBAfter==2 &&
+    engineerCAfter==2)
+      then{
+      System.out.println("You win!");
+    }
+
+  }
+  
+ 
+
+
+public static void main(String[] args) {
+  
+  }
+  
+
+  
+}
+
