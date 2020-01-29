@@ -1,33 +1,77 @@
-
 public class ManagersCrossing{
-  
 
-  public static boolean isMoveOkay(int boatBefore, int managerABefore, int managerBBefore, int managerCBefore, 
-                                   int engineerABefore, int engineerBBefore, int engineerCBefore, int boatAfter, 
-                                   int managerAAfter, int managerBAfter, int managerCAfter, int engineerAAfter, 
-                                   int engineerBAfter, int engineerCAfter){
 
-    if (b)
+    public static boolean isMoveOkay(int boatBefore, int managerABefore, int managerBBefore, int managerCBefore,
+                                     int engineerABefore, int engineerBBefore, int engineerCBefore, int boatAfter,
+                                     int managerAAfter, int managerBAfter, int managerCAfter, int engineerAAfter,
+                                     int engineerBAfter, int engineerCAfter){
 
-    boolean legalMove =
-//Fill in your code here. Note that you can create other methods to do each test, but use this 
-//method to coordinate those tests.
-    if (boatAfter==2 && managerAAfter==2 && managerBAfter==2 && managerCAfter==2 && engineerAAfter==2 && engineerBAfter==2 &&
-    engineerCAfter==2)
-      then{
-      System.out.println("You win!");
+        //Checking for same side as boat
+        
+
+        //Checking for engineer A poaching (postion 1)
+        if (((engineerABefore==1 || (engineerAAfter == 1)) && ((managerABefore==2 || managerAAfter==2)))  &&
+                (((managerBBefore==1 || managerBAfter==1)) || ((managerCBefore==1 || managerCAfter==1))){
+            return false;
+            System.out.println("Engineer A would be poached!");
+        }
+
+        //Checking for engineer A poaching (postion 2)
+        if (((engineerABefore==2 || (engineerAAfter==2)) && ((managerABefore==1 || managerAAfter==1)))  &&
+                (((managerBBefore==2 || managerBAfter==2)) || ((managerCBefore==2 || managerCAfter==2))){
+            return false;
+            System.out.println("Engineer A would be poached!");
+        }
+
+        //Checking for engineer B poaching (position 1)
+        if (((engineerBBefore==1 || (engineerBAfter == 1)) && ((managerBBefore==2 || managerBAfter==2)))  &&
+                (((managerABefore==1 || managerAAfter==1)) || ((managerCBefore==1 || managerCAfter==1))) {
+            return false;
+            System.out.println("Engineer B would be poached!");
+        }
+
+        //Checking for engineer B poaching (position 2)
+        if (((engineerBBefore==2 || (engineerBAfter == 2)) && ((managerBBefore==1 || managerBAfter==1)))  &&
+                (((managerABefore==2 || managerAAfter==2)) || ((managerCBefore==2 || managerCAfter==2))) {
+            return false;
+            System.out.println("Engineer B would be poached!");
+        }
+
+        //Checking for engineer C poaching (position 1)
+        if (((engineerCBefore==1 || (engineerCAfter == 1)) && ((managerCBefore==2 || managerCAfter==2)))  &&
+                (((managerABefore==1 || managerAAfter==1)) || ((managerBBefore==1 || managerBAfter==1))) {
+            return false;
+            System.out.println("Engineer C would be poached!");
+        }
+
+        //Checking for engineer C poaching (position 2)
+        if (((engineerCBefore==2 || (engineerCAfter == 2)) && ((managerCBefore==1 || managerCAfter==1)))  &&
+                (((managerABefore==2 || managerAAfter==2)) || ((managerBBefore==2 || managerBAfter==2))) {
+            return false;
+            System.out.println("Engineer C would be poached!");
+        }
+
+        //Checking for boat movement
+        if (boatAfter==boatBefore) {
+                return false;
+                System.out.println("You need to move the boat!")
+            }
+
+        //Checking win condition
+        if (boatAfter==2 && managerAAfter==2 && managerBAfter==2 && managerCAfter==2 && engineerAAfter==2 && engineerBAfter==2 &&
+                engineerCAfter==2) {
+        System.out.println("You win!");
+        }
+
     }
 
-  }
-  
- 
 
 
-public static void main(String[] args) {
-  
-  }
-  
 
-  
+    public static void main(String[] args) {
+
+    }
+
+
+
 }
-
