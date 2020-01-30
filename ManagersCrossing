@@ -142,46 +142,46 @@ public class ManagersCrossing{
     	}
     	
     	if (peopleMoving < 1 || peopleMoving > 2) {
-    		System.out.println("You must move 1 or 2 people!");
+    		System.out.println("You must move one or two people!");
     	}
     	
-        //Checking for manager B poaching engineer A
-        if (((engineerABefore==1 || (engineerAAfter == 1)) && ((managerABefore==2 || managerAAfter==2)))  &&
-                (((managerBBefore==1 || managerBAfter==1)))){
-            System.out.println("Manager B would try to recruit someone!");
-            return false;
-        }
-        
         //Checking for manager C poaching engineer A
-        if (((engineerABefore==1 || (engineerAAfter == 1)) && ((managerABefore==2 || managerAAfter==2)))  &&
+        if (((engineerABefore==1 || engineerAAfter == 1)) && ((managerABefore==2 || managerAAfter==2)) &&
                 (((managerCBefore==1 || managerCAfter==1)))){
             System.out.println("Manager C would try to recruit someone!");
             return false;
         }
         
+    	//Checking for manager B poaching engineer A
+        if (((engineerABefore==1 || engineerAAfter == 1)) && ((managerABefore==2 || managerAAfter==2))  &&
+                (((managerBBefore==1 || managerBAfter==1)))){
+            System.out.println("Manager B would try to recruit someone!");
+            return false;
+        }
+        
         //Checking for manager A poaching engineer B
-        if (((engineerBBefore==1 || (engineerBAfter == 1)) && ((managerBBefore==2 || managerBAfter==2)))  &&
+        if (((engineerBBefore==1 || engineerBAfter == 1)) && ((managerBBefore==2 || managerBAfter==2)) &&
                 (((managerABefore==1 || managerAAfter==1)))){
             System.out.println("Manager A would try to recruit someone!");
             return false;
         }
         
         //Checking for manager C poaching engineer B
-        if (((engineerBBefore==1 || (engineerBAfter == 1)) && ((managerBBefore==2 || managerBAfter==2)))  &&
+        if (((engineerBBefore==1 || engineerBAfter == 1)) && ((managerBBefore==2 || managerBAfter==2)) &&
                 (((managerCBefore==1 || managerCAfter==1)))){
             System.out.println("Manager C would try to recruit someone!");
             return false;
         }
         
         //Checking for manager A poaching engineer C
-        if (((engineerCBefore==1 || (engineerCAfter == 1)) && ((managerCBefore==2 || managerCAfter==2)))  &&
+        if (((engineerCBefore==1 || engineerCAfter == 1)) && ((managerCBefore==2 || managerCAfter==2)) &&
                 (((managerABefore==1 || managerAAfter==1)))){
             System.out.println("Manager A would try to recruit someone!");
             return false;
         }
         
         //Checking for manager B poaching engineer C
-        if (((engineerCBefore==1 || (engineerCAfter == 1)) && ((managerCBefore==2 || managerCAfter==2)))  &&
+        if (((engineerCBefore==1 || engineerCAfter == 1)) && ((managerCBefore==2 || managerCAfter==2)) &&
                 (((managerBBefore==1 || managerBAfter==1)))){
             System.out.println("Manager B would try to recruit someone!");
             return false;
