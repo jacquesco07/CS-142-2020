@@ -145,54 +145,56 @@ public class ManagersCrossing{
     		System.out.println("You must move 1 or 2 people!");
     	}
     	
-        //Checking for engineer A poaching (position 1)
+        //Checking for manager B poaching engineer A
         if (((engineerABefore==1 || (engineerAAfter == 1)) && ((managerABefore==2 || managerAAfter==2)))  &&
                 (((managerBBefore==1 || managerBAfter==1)))){
             System.out.println("Manager B would try to recruit someone!");
             return false;
         }
-
-        //Checking for engineer A poaching (position 2)
-        if (((engineerABefore==2 || (engineerAAfter==2)) && ((managerABefore==1 || managerAAfter==1)))  &&
-                (((managerBBefore==2 || managerBAfter==2)) || ((managerCBefore==2 || managerCAfter==2)))){
-            System.out.println("Engineer A would be poached!");
+        
+        //Checking for manager C poaching engineer A
+        if (((engineerABefore==1 || (engineerAAfter == 1)) && ((managerABefore==2 || managerAAfter==2)))  &&
+                (((managerCBefore==1 || managerCAfter==1)))){
+            System.out.println("Manager C would try to recruit someone!");
             return false;
         }
-
-        //Checking for engineer B poaching (position 1)
+        
+        //Checking for manager A poaching engineer B
         if (((engineerBBefore==1 || (engineerBAfter == 1)) && ((managerBBefore==2 || managerBAfter==2)))  &&
-                (((managerABefore==1 || managerAAfter==1)) || ((managerCBefore==1 || managerCAfter==1)))) {
-            System.out.println("Engineer B would be poached!");
+                (((managerABefore==1 || managerAAfter==1)))){
+            System.out.println("Manager A would try to recruit someone!");
             return false;
         }
-
-        //Checking for engineer B poaching (position 2)
-        if (((engineerBBefore==2 || (engineerBAfter == 2)) && ((managerBBefore==1 || managerBAfter==1)))  &&
-                (((managerABefore==2 || managerAAfter==2)) || ((managerCBefore==2 || managerCAfter==2)))) {
-            System.out.println("Engineer B would be poached!");
+        
+        //Checking for manager C poaching engineer B
+        if (((engineerBBefore==1 || (engineerBAfter == 1)) && ((managerBBefore==2 || managerBAfter==2)))  &&
+                (((managerCBefore==1 || managerCAfter==1)))){
+            System.out.println("Manager C would try to recruit someone!");
             return false;
         }
-
-        //Checking for engineer C poaching (position 1)
+        
+        //Checking for manager A poaching engineer C
         if (((engineerCBefore==1 || (engineerCAfter == 1)) && ((managerCBefore==2 || managerCAfter==2)))  &&
-                (((managerABefore==1 || managerAAfter==1)) || ((managerBBefore==1 || managerBAfter==1)))) {
-            System.out.println("Engineer C would be poached!");
+                (((managerABefore==1 || managerAAfter==1)))){
+            System.out.println("Manager A would try to recruit someone!");
+            return false;
+        }
+        
+        //Checking for manager B poaching engineer C
+        if (((engineerCBefore==1 || (engineerCAfter == 1)) && ((managerCBefore==2 || managerCAfter==2)))  &&
+                (((managerBBefore==1 || managerBAfter==1)))){
+            System.out.println("Manager B would try to recruit someone!");
             return false;
         }
 
-        //Checking for engineer C poaching (position 2)
-        if (((engineerCBefore==2 || (engineerCAfter == 2)) && ((managerCBefore==1 || managerCAfter==1)))  &&
-                (((managerABefore==2 || managerAAfter==2)) || ((managerBBefore==2 || managerBAfter==2)))) {
-            System.out.println("Engineer C would be poached!");
-            return false;
-        }
+     
         
 
 
         //Checking win condition
         if (boatAfter==2 && managerAAfter==2 && managerBAfter==2 && managerCAfter==2 && engineerAAfter==2 && engineerBAfter==2 &&
                 engineerCAfter==2) {
-        System.out.println("You win!");
+        System.out.println("You solved the puzzle!");
         }
         return true;
     }
