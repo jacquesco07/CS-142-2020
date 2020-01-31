@@ -7,13 +7,13 @@ public class ManagersCrossing{
                                      int engineerBAfter, int engineerCAfter){
 
        //Initializing all parameter values
-    	if (boatBefore == 1 && boatBefore == 2) {
+    	if (boatBefore != 1 && boatBefore != 2) {
     		System.out.println("All positions must be 1 or 2!");
     		return false;
     	}
 
     	
-    	if (boatAfter == 1 && boatBefore == 2) {
+    	if (boatAfter != 1 && boatAfter != 2) {
     		System.out.println("All positions must be 1 or 2!");
     		return false;
     	}
@@ -144,24 +144,9 @@ public class ManagersCrossing{
     	
     	if (peopleMoving < 1 || peopleMoving > 2) {
     		System.out.println("You must move one or two people!");
-    	}
-    	
-        //Checking for manager A recruiting someone
-    	
-    	if (managerAAfter==1 && engineerBAfter==1) {
-    		System.out.println("Manager A would try to recruit someone!");
     		return false;
     	}
 
-    	
-/*
-    	//Checking for manager C poaching engineer A
-        if (((engineerABefore==1 || engineerAAfter == 1)) && ((managerABefore==2 || managerAAfter==2)) &&
-                (((managerCBefore==1 || managerCAfter==1)))){
-            System.out.println("Manager C would try to recruit someone!");
-            return false;
-        }
-        
     	//Checking for manager B poaching engineer A
         if (((engineerABefore==1 || engineerAAfter == 1)) && ((managerABefore==2 || managerAAfter==2))  &&
                 (((managerBBefore==1 || managerBAfter==1)))){
@@ -196,7 +181,7 @@ public class ManagersCrossing{
             System.out.println("Manager B would try to recruit someone!");
             return false;
         }
-*/
+
      
         
 
